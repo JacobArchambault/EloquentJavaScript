@@ -1,3 +1,12 @@
+// Function calls
+let oldArray = [1, 2, 3, 4, 5];
+reverseArray(oldArray);
+
+let myArray = [2,4,6,8,10];
+reverseArrayInPlace(myArray);
+console.log(myArray);
+
+// Functions
 function reverseArray(array){
 	let newArray = [];
 	for (let arrayNumber of array) {
@@ -6,8 +15,6 @@ function reverseArray(array){
 	return newArray;
 };
 
-let oldArray = [1, 2, 3, 4, 5];
-reverseArray(oldArray);
 
 function reverseArrayInPlace(array){
 	let tempArray = reverseArray(array);
@@ -15,14 +22,8 @@ function reverseArrayInPlace(array){
 	pushAll(tempArray, array);
 };
 
-let myArray = [2,4,6,8,10];
-reverseArrayInPlace(myArray);
-console.log(myArray);
-
 function emptyArray(array) {
-	while (array.length > 0) {
-		array.pop();
-	}	
+	array.length = 0;
 }
 
 function pushAll(fromArray, toArray) {
