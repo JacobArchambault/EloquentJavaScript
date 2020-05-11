@@ -1,7 +1,7 @@
 function arrayToList(array) {
 	// declare list
 	let list = {value: null, rest: null};
-	let node;
+	let node = null;
 	// declare and initialize decrementer
 	let d = array.length - 1;
 	
