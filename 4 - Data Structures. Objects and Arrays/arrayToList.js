@@ -1,17 +1,19 @@
 function arrayToList(array) {
-	// Create list
+	// declare list
 	let list = {value: null, rest: null};
-	// set decrementer
+	let node;
+	// declare and initialize decrementer
 	let d = array.length - 1;
-	// set value to array number.
-	list.value = array[d];
-	// reset decrementer
-	d--;
-	// Prepend node to list
-	let node = {value: array[d], rest: list};
-	d--;
-	let node2 = {value: array[d], rest: node};
-
-	return node2;
+	
+	// Prepend nodes to list until reaching the beginning of array.
+	while (d >= 0) {
+		// set value of list to element at array index.
+		list = {value: array[d], rest: node};
+		// set node value to entire list.
+		node = list;
+		// decrement.
+		d--;
+	}
+	return list;
 }
 console.log(arrayToList([1, 2, 3]));
