@@ -11,3 +11,13 @@ function arrayToList(array) {
 	return list;
 }
 console.log(arrayToList([1, 2, 3]));
+
+let myList = {value: 1, rest: {value: 2, rest: {value: 3, rest: null}}};
+listToArray(myList);
+function listToArray(list) {
+	let array = [];
+	array[0] = list.value;
+	array[1] = list.rest.value; 
+	array[2] = list.rest.rest.value;
+	return array;
+}
