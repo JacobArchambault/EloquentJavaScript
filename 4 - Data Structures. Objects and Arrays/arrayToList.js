@@ -15,9 +15,12 @@ console.log(arrayToList([1, 2, 3]));
 let myList = {value: 1, rest: {value: 2, rest: {value: 3, rest: null}}};
 listToArray(myList);
 function listToArray(list) {
+	let i = 0;
 	let array = [];
-	array[0] = list.value;
-	array[1] = list.rest.value; 
-	array[2] = list.rest.rest.value;
+	array[i] = list.value;
+	i++;
+	array[i] = list.rest.value;
+	i++;
+	array[i] = list.rest.rest.value;
 	return array;
 }
