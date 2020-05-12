@@ -10,10 +10,7 @@ function arrayToList(array) {
 	}
 	return list;
 }
-console.log(arrayToList([1, 2, 3]));
 
-let myList = {value: 1, rest: {value: 2, rest: {value: 3, rest: null}}};
-listToArray(myList);
 function listToArray(list) {
 	let array = [];
 	let node = list;
@@ -26,3 +23,15 @@ function listToArray(list) {
 	// set first value;
 	return array;
 }
+
+function prepend(myElement, list) {
+	let newList = {value: myElement, rest: list};
+	return newList;
+}
+
+console.log(arrayToList([1, 2, 3]));
+
+let myList = {value: 1, rest: {value: 2, rest: {value: 3, rest: null}}};
+listToArray(myList);
+
+prepend(0, myList);
