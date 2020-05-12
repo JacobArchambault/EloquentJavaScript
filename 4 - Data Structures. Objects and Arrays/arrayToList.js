@@ -15,12 +15,14 @@ console.log(arrayToList([1, 2, 3]));
 let myList = {value: 1, rest: {value: 2, rest: {value: 3, rest: null}}};
 listToArray(myList);
 function listToArray(list) {
-	let i = 0;
 	let array = [];
-	array[i] = list.value;
-	i++;
-	array[i] = list.rest.value;
-	i++;
-	array[i] = list.rest.rest.value;
+	let node = list;
+	let i = 0;
+	while (node) {
+		array[i] = node.value;
+		node = node.rest;
+		i++; 		
+	}
+	// set first value;
 	return array;
 }
