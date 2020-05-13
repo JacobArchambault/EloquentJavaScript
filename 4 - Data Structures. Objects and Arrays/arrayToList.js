@@ -29,9 +29,24 @@ function prepend(myElement, list) {
 	return newList;
 }
 
+function nth(list, index) {
+	let node;
+	if (index == 0) {
+    	node = list;
+	} else if (index == 1) {
+		node = list.rest;
+	} else if (index == 2) {
+		node = list.rest.rest;
+	}
+	return node.value;
+}
+
+
+
 console.log(arrayToList([1, 2, 3]));
 
 let myList = {value: 1, rest: {value: 2, rest: {value: 3, rest: null}}};
 listToArray(myList);
 
 prepend(0, myList);
+nth(myList, 2);
