@@ -32,16 +32,11 @@ function prepend(myElement, list) {
 function nth(list, index) {
 	let node;
 	if (index == 0) {
-    	node = list;
-	} else if (index == 1) {
-		node = list.rest;
-	} else if (index == 2) {
-		node = list.rest.rest;
+    	return list;
+	} else {
+		return nth(list, index - 1).rest;
 	}
-	return node.value;
 }
-
-
 
 console.log(arrayToList([1, 2, 3]));
 
