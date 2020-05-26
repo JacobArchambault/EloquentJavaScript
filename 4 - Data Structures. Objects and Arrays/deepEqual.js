@@ -6,7 +6,7 @@ function deepEqual(a, b){
 	// Directly compare nulls and non-objects for equality.
     if (a === null || b === null || typeof(a) !== 'object' || typeof(b) !=='object') {return a === b;}
 	
-	// To allow easy iteration over them in order to check their quantity, then recursively check their values for equality, put object property keys into arrays.
+	// To allow easy iteration over them in order to check their number, then recursively check their values for equality, put object property keys into arrays.
 	let aProperties = Object.keys(a); 
 	let bProperties = Object.keys(b);
 
