@@ -1,10 +1,8 @@
-function loop(value, testFunction, body, updateFunction) {
+function loop(value, testFunction, updateFunction, body) {
 	while (testFunction(value)) {
-		body();
-		updateFunction(value);
-
+		body(value);
+		value = updateFunction(value);
 	}
 	return value;
 }
-let i = 0;
-loop(i, () => i < 10, () => console.log("Hello"), ()=> i++);
+loop(0, i => i < 10, (i) => i + 1, console.log);
