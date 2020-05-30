@@ -1,4 +1,4 @@
-function flatten(myArray) {
-	return myArray.reduce((a, b) => a.concat(b));
+function flatten(twoDArray) {
+	return twoDArray.reduce((a, b) => a.concat(b));
 }
-flatten([[1, 2], [7, [8, 9]], [3, 4],[5, 6]]);
+flatten([[1, 2], [7, 8, 9], [3, 4],[5, 6]]);
