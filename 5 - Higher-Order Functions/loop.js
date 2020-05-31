@@ -6,3 +6,9 @@ function loop(value, testFunction, updateFunction, body, ...args) {
 	return value;
 }
 loop(0, i => i < 10, (i) => i + 1, console.log, "Hello");
+
+function doorsFunc(...args) {
+	for (let arg of args) {
+		console.log(arg);
+	}
+}
